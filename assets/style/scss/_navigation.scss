@@ -29,7 +29,9 @@
 		padding-right: 1em;
 		
 		&:hover {
-			color: $color__blue;
+			background-color: $color__blue;
+			color: #fff;
+			font-weight: 700;
 		}
 	}
 	
