@@ -37,6 +37,16 @@ function nest378_widgets_init() {
 			'after_title' => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name' => __( 'Note', 'nest378' ),
+			'id' => 'header-note',
+			'description' => __( 'Add something to the header on the front page.', 'nest378' ),
+			'before_widget' => '<aside class="header-note">',
+			'after_widget' => '</aside>',
+		)
+	);
 }
 add_action( 'widgets_init', 'nest378_widgets_init' );
 
