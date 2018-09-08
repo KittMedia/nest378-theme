@@ -32,35 +32,29 @@ get_header(); ?>
 				$latest_posts_args = [
 					'no_found_rows' => true,
 					'update_post_meta_cache' => false,
-					'posts_per_page' => 3,
+					'posts_per_page' => 4,
 				];
 
 				$latest_posts = new WP_Query( $latest_posts_args );
 
 				if ( $latest_posts->have_posts() ) : ?>
-					<div class="latest-posts-front-page-block">
+					<div class="latest-posts-front-page-block entry-content">
 						<h2><?php esc_html_e( 'Latest posts', 'nest378' ); ?></h2>
-						<?php while ( $latest_posts->have_posts() ) :
-							$latest_posts->the_post();
+						<div>
+							<?php while ( $latest_posts->have_posts() ) :
+								$latest_posts->the_post();
 
-							printf(
-								'<article>
-	%1$s
-	<h3><a href="%2$s">%3$s</a></h3>
-	%4$s
-</article>',
-								sprintf(
-									get_the_post_thumbnail() !== '' ? sprintf(
-											'<figure><a href="%s" tabindex="-1"><img src="%s"></a></figure>',
-											get_the_permalink(),
-											get_the_post_thumbnail_url( get_the_ID(), 'medium' )
-									) : ''
-								),
-								get_the_permalink(),
-								get_the_title(),
-								get_the_excerpt() !== '' ? '<p>' . get_the_excerpt() . '</p>' : ''
-							);
-						endwhile; ?>
+								printf(
+									'<article>
+		<h3><a href="%1$s">%2$s</a></h3>
+		%3$s
+	</article>',
+									get_the_permalink(),
+									get_the_title(),
+									get_the_excerpt() !== '' ? '<p>' . get_the_excerpt() . '</p>' : ''
+								);
+							endwhile; ?>
+						</div>
 					</div>
 				<?php endif;
 			endif;
