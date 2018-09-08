@@ -30,7 +30,7 @@ function nest378_widgets_init() {
 		array(
 			'name' => __( 'Special Widgets', 'nest378' ),
 			'id' => 'sidebar-special',
-			'description' => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+			'description' => __( 'Add widgets here to appear in your sidebar.', 'nest378' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h2 class="widget-title">',
@@ -46,3 +46,10 @@ add_action( 'widgets_init', 'nest378_widgets_init' );
 add_filter( 'excerpt_length', function() {
 	return 25;
 });
+
+function nest378_register_menu() {
+	register_nav_menus( array(
+		'footer-menu' => __( 'Footer Menu', 'nest378' ),
+	) );
+}
+add_action( 'after_setup_theme', 'nest378_register_menu' );

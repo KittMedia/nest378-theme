@@ -8,10 +8,27 @@
 }
 
 .site-info {
+	display: flex;
+	justify-content: flex-end;
 	padding: 1em 0 3em;
 	
 	@media screen and (min-width: 59.6875em) {
 		padding-left: 1em;
 		padding-right: 1em;
+	}
+}
+
+.menu-footer-menue-container {
+	li {
+		display: inline-block;
+		list-style-type: none;
+
+		&::before {
+			content: ' | ';
+		}
+
+		&:first-of-type::before {
+			content: '';
+		}
 	}
 }
