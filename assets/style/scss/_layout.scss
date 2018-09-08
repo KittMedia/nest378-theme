@@ -35,6 +35,7 @@ input[type="submit"],
 .pagination,
 .pingback .edit-link,
 .post-navigation .meta-nav,
+.post-navigation .post-title,
 .post-password-form label,
 .site .skip-link,
 .site-description,
@@ -46,6 +47,7 @@ input[type="submit"],
 .widget_rss cite,
 .wp-caption-text {
 	font-family: "Open Sans", sans-serif;
+	text-transform: none;
 }
 
 ::-webkit-input-placeholder {
