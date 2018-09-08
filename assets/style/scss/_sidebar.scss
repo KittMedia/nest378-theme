@@ -3,17 +3,26 @@
 	top: 0 !important;
 }
 
+.widget {
+	background-color: $color__grey-light;
+	padding: 1em;
+}
+
+.widget-title {
+	border-bottom: 4px solid #333;
+	font-size: 2rem;
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+	text-transform: none;
+}
+
 .special-area .widget {
 	background-color: $color__background-special;
 	color: $color__text-special;
 	
-	h2 {
-		border-bottom: 4px solid $color__text-special;
+	.widget-title {
+		border-bottom-color: $color__text-special;
 		color: $color__text-special;
-		font-size: 2rem;
-		margin-bottom: 15px;
-		padding-bottom: 5px;
-		text-transform: none;
 	}
 }
 
@@ -23,12 +32,11 @@
 	}
 	
 	.widget-area:not(:last-child) {
-		margin-bottom: 60px;
+		margin-bottom: 4em;
 	}
 	
 	.widget {
-		margin-bottom: 60px;
-		padding: 20px;
+		margin-bottom: 4em;
 		
 		&:last-child {
 			margin-bottom: 0;
