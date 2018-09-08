@@ -3,10 +3,32 @@
 	top: 0 !important;
 }
 
+.special-area .widget {
+	background-color: $color__background-special;
+	color: $color__text-special;
+	
+	h2 {
+		border-bottom: 4px solid $color__text-special;
+		color: $color__text-special;
+		font-size: 2rem;
+		margin-bottom: 15px;
+		padding-bottom: 5px;
+		text-transform: none;
+	}
+}
+
 @media screen and (min-width: 59.6875em) {
+	.sidebar {
+		width: 23.4118%;
+	}
+	
+	.widget-area:not(:last-child) {
+		margin-bottom: 60px;
+	}
+	
 	.widget {
 		margin-bottom: 60px;
-		padding: 0 20px;
+		padding: 20px;
 		
 		&:last-child {
 			margin-bottom: 0;

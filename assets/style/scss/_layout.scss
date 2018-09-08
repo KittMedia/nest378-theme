@@ -10,7 +10,57 @@ body,
 button,
 input,
 select,
-textarea {
+textarea,
+blockquote cite,
+blockquote small,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.author-heading,
+.comment-form label,
+.comment-list .reply a,
+.comment-metadata,
+.comment-navigation,
+.comment-notes,
+.comment-awaiting-moderation,
+.form-allowed-tags,
+.entry-caption,
+.entry-footer,
+.gallery-caption,
+.image-navigation,
+.logged-in-as,
+.main-navigation .menu-item-description,
+.no-comments,
+.page-links,
+.pagination,
+.pingback .edit-link,
+.post-navigation .meta-nav,
+.post-password-form label,
+.site .skip-link,
+.site-description,
+.site-title,
+.widecolumn label,
+.widecolumn .mu_register label,
+.widget-title,
+.widget_rss .rss-date,
+.widget_rss cite,
+.wp-caption-text {
+	font-family: "Open Sans", sans-serif;
+}
+
+::-webkit-input-placeholder {
+	font-family: "Open Sans", sans-serif;
+}
+
+:-moz-placeholder {
+	font-family: "Open Sans", sans-serif;
+}
+
+::-moz-placeholder {
+	font-family: "Open Sans", sans-serif;
+}
+
+:-ms-input-placeholder {
 	font-family: "Open Sans", sans-serif;
 }
 
@@ -18,4 +68,11 @@ textarea {
 .page-header,
 .page-content {
 	box-shadow: none;
+}
+
+@media screen and (min-width: 59.6875em) {
+	.site-content {
+		margin-left: 23.4118%;
+		width: 76.5882%;
+	}
 }

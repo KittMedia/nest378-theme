@@ -1,5 +1,42 @@
-@media screen and (min-width: 59.6875em) {
-	.main-navigation {
+.main-navigation {
+	background-color: $color__grey-light;
+	padding: 10px;
+	
+	@media screen and (min-width: 59.6875em) {
 		margin: 0 0 60px;
+	}
+	
+	ul {
+		border: none;
+		
+		ul {
+			border-left: 10px solid $color__blue;
+			margin-left: 0;
+		}
+	}
+	
+	li {
+		border-top: 10px solid $color__grey-light;
+		
+		li {
+			border-top: 0;
+		}
+	}
+	
+	a {
+		background-color: #fff;
+		padding-left: 1em;
+	}
+	
+	.current-menu-item {
+		> a {
+			background-color: $color__blue;
+			color: #fff;
+		}
+		
+		> .dropdown-toggle,
+		> .dropdown-toggle::after {
+			color: #fff;
+		}
 	}
 }

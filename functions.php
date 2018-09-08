@@ -21,6 +21,26 @@ function nest378_styles() {
 add_action( 'wp_enqueue_scripts', 'nest378_styles' );
 
 /**
+ * Register widget area.
+ * 
+ * @link https://codex.wordpress.org/Function_Reference/register_sidebar
+ */
+function nest378_widgets_init() {
+	register_sidebar(
+		array(
+			'name' => __( 'Special Widgets', 'nest378' ),
+			'id' => 'sidebar-special',
+			'description' => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h2 class="widget-title">',
+			'after_title' => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'nest378_widgets_init' );
+
+/**
  * Set excerpt length.
  */
 add_filter( 'excerpt_length', function() {
