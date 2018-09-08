@@ -108,6 +108,10 @@ input[type="submit"],
 	flex-wrap: wrap;
 	justify-content: space-between;
 	
+	@media screen and (min-width: 38.75em) {
+		top: 45px;
+	}
+	
 	.widget {
 		background-color: rgba(0, 0, 0, 0);
 		box-sizing: border-box;
@@ -118,7 +122,6 @@ input[type="submit"],
 		@media screen and (min-width: 38.75em) {
 			flex: 0 1 23%;
 			margin-bottom: 0;
-			top: 45px;
 		}
 		
 		a {
