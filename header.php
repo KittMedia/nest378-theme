@@ -89,18 +89,22 @@
 			<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'twentyfifteen' ); ?></button>
 		</div><!-- .site-branding -->
 		<?php
-		$header_image = get_header_image(); ?>
+		if ( has_post_thumbnail() && is_page() ) :
+			$header_image = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+		else :
+			$header_image = get_header_image();
+		endif;
+		if ( $header_image !== '' ) : ?>
 			<figure>
 				<?php printf(
 						'<img src="%s">',
 						$header_image
 				);
-				if ( is_active_sidebar( 'header-note' ) && $header_image !== '' ) : ?>
-					<div class="header-note">
-						<?php dynamic_sidebar( 'header-note' ); ?>
-					</div>
-				<?php endif; ?>
+				if ( is_active_sidebar( 'header-note' ) && $header_image !== '' && is_front_page() ) :
+					dynamic_sidebar( 'header-note' );
+				endif; ?>
 			</figure>
+		<?php endif; ?>
 	</header><!-- .site-header -->
 
 	<div id="sidebar" class="sidebar">

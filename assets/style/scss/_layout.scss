@@ -70,6 +70,10 @@ input[type="submit"],
 	box-shadow: none;
 }
 
+.hentry + .hentry {
+	border-top: 0;
+}
+
 @media screen and (min-width: 38.75em) {
 	.site-main,
 	.hentry,
