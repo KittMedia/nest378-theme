@@ -1,5 +1,9 @@
 .latest-posts-front-page-block {
-	padding: 3em 7.6923% 0;
+	padding: 5em 7.6923% 0;
+	
+	> h2 {
+		margin-bottom: 0;
+	}
 
 	h3 {
 		font-size: 1em;
