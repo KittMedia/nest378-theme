@@ -2,3 +2,14 @@
 	position: relative !important;
 	top: 0 !important;
 }
+
+@media screen and (min-width: 59.6875em) {
+	.widget {
+		margin-bottom: 60px;
+		padding: 0 20px;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -5,3 +5,17 @@ body {
 		content: none;
 	}
 }
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: "Open Sans", sans-serif;
+}
+
+.hentry,
+.page-header,
+.page-content {
+	box-shadow: none;
+}
