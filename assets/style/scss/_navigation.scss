@@ -27,6 +27,10 @@
 		background-color: #fff;
 		padding-left: 1em;
 		padding-right: 1em;
+		
+		&:hover {
+			color: $color__blue;
+		}
 	}
 	
 	.current-menu-item {
