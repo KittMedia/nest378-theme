@@ -112,3 +112,47 @@ function twentyfifteen_header_style() {
 	</style>
 	<?php
 }
+
+/**
+ * Remove gallery posts from blog view.
+ *
+ * @link https://wordpress.stackexchange.com/questions/152882/how-to-query-posts-of-standard-post-format-for-real
+ *
+ * @param \WP_Query $wp_query WP_Query object.
+ */
+add_filter( 'pre_get_posts', function( $query ) {
+	if ( $query->is_home() && $query->is_main_query() ) {
+		// tax_query takes a double array
+		$args = array (
+			array (
+				'taxonomy' => 'post_format',
+				'field' => 'slug',
+				'terms' => 'post-format-gallery',
+				'operator' => 'NOT IN'
+			)
+		);
+		$query->set( 'tax_query', $args );
+	}
+});
+
+/**
+ * Remove gallery posts from latest posts widget.
+ *
+ * @link https://gist.github.com/wpchannel/6821b07fe7549ac41eb7643168de1ccb
+ *
+ * @param array $params Params for latest posts query.
+ *
+ * @return array
+ */
+function wpc_filter_recent_posts_widget_parameters($params) {
+	$params['tax_query'] = array(
+		array(
+			'taxonomy' => 'post_format',
+			'field' => 'slug',
+			'terms' => array('post-format-gallery'),
+			'operator' => 'NOT IN',
+		)
+	);
+	return $params;
+}
+add_filter('widget_posts_args', 'wpc_filter_recent_posts_widget_parameters');

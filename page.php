@@ -39,6 +39,14 @@ get_header(); ?>
 					'no_found_rows' => true,
 					'update_post_meta_cache' => false,
 					'posts_per_page' => 4,
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'post_format',
+							'field' => 'slug',
+							'terms' => array('post-format-gallery'),
+							'operator' => 'NOT IN',
+						)
+					)
 				];
 
 				$latest_posts = new WP_Query( $latest_posts_args );
