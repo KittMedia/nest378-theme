@@ -89,7 +89,6 @@ add_filter( 'twentyfifteen_custom_header_args', function() {
 });
 
 function twentyfifteen_header_style() {
-	$header_image = get_header_image();
 
 	// If no custom options for text are set, let's bail.
 	if ( empty( $header_image ) && display_header_text() ) {
@@ -100,67 +99,6 @@ function twentyfifteen_header_style() {
 	?>
 	<style type="text/css" id="twentyfifteen-header-css">
 		<?php
-			// Short header for when there is no Custom Header and Header Text is hidden.
-			if ( empty( $header_image ) && ! display_header_text() ) :
-		?>
-		.site-header {
-			padding-top: 14px;
-			padding-bottom: 14px;
-		}
-
-		.site-branding {
-			min-height: 42px;
-		}
-
-		@media screen and (min-width: 46.25em) {
-			.site-header {
-				padding-top: 21px;
-				padding-bottom: 21px;
-			}
-			.site-branding {
-				min-height: 56px;
-			}
-		}
-		@media screen and (min-width: 55em) {
-			.site-header {
-				padding-top: 25px;
-				padding-bottom: 25px;
-			}
-			.site-branding {
-				min-height: 62px;
-			}
-		}
-		@media screen and (min-width: 59.6875em) {
-			.site-header {
-				padding-top: 0;
-				padding-bottom: 0;
-			}
-			.site-branding {
-				min-height: 0;
-			}
-		}
-		<?php
-			endif;
-
-			// Has a Custom Header been added?
-			if ( ! empty( $header_image ) ) :
-		?>
-		.site-header {
-
-			/*
-			 * No shorthand so the Customizer can override individual properties.
-			 * @see https://core.trac.wordpress.org/ticket/31460
-			 */
-			background-image: url(<?php header_image(); ?>);
-			background-repeat: no-repeat;
-			background-position: 50% 50%;
-			-webkit-background-size: cover;
-			-moz-background-size:    cover;
-			-o-background-size:      cover;
-			background-size:         cover;
-		}
-		<?php
-			endif;
 
 			// Has the text been hidden?
 			if ( ! display_header_text() ) :

@@ -12,6 +12,25 @@
 
 .site-header {
 	border-bottom: 0;
+
+	> figure {
+		position: relative;
+	}
+}
+
+@media screen and (max-width: 59.6874em) {
+	.header-note {
+		display: none;
+	}
+}
+
+.header-note {
+	background-color: $color__background-special;
+	color: $color__text-special;
+	left: 3em;
+	padding: .5em 1em;
+	position: absolute;
+	top: -1em;
 }
 
 @media screen and (min-width: 59.6875em) {

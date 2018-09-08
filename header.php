@@ -88,6 +88,19 @@
 			?>
 			<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'twentyfifteen' ); ?></button>
 		</div><!-- .site-branding -->
+		<?php
+		$header_image = get_header_image(); ?>
+			<figure>
+				<?php printf(
+						'<img src="%s">',
+						$header_image
+				);
+				if ( is_active_sidebar( 'header-note' ) && $header_image !== '' ) : ?>
+					<div class="header-note">
+						<?php dynamic_sidebar( 'header-note' ); ?>
+					</div>
+				<?php endif; ?>
+			</figure>
 	</header><!-- .site-header -->
 
 	<div id="sidebar" class="sidebar">
