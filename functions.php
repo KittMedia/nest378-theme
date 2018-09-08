@@ -19,3 +19,10 @@ function nest378_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'nest378_styles' );
+
+/**
+ * Set excerpt length.
+ */
+add_filter( 'excerpt_length', function() {
+	return 25;
+});
