@@ -92,6 +92,13 @@ input[type="submit"],
 	}
 }
 
+.entry-content,
+.entry-summary {
+	.more-link::after {
+		top: 0;
+	}
+}
+
 .entry-points {
 	display: flex;
 	flex-wrap: wrap;
@@ -100,9 +107,14 @@ input[type="submit"],
 	.widget {
 		background-color: rgba(0, 0, 0, 0);
 		box-sizing: border-box;
-		flex: 0 1 23%;
-		margin: 0;
+		flex: 0 1 48%;
+		margin: 0 0 3em;
 		padding: 0;
+		
+		@media screen and (min-width: 38.75em) {
+			flex: 0 1 23%;
+			margin-bottom: 0;
+		}
 		
 		a {
 			display: block;
