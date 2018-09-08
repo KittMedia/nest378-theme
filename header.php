@@ -17,6 +17,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
+	<![endif]-->
 	
 	<style>
 		@font-face {
@@ -51,7 +52,6 @@
 			url('/assets/fonts/open-sans-v15-latin-700italic.woff2') format('woff2'), url('/assets/fonts/open-sans-v15-latin-700italic.woff') format('woff');
 		}
 	</style>
-	<![endif]-->
 	<?php wp_head(); ?>
 </head>
 
