@@ -14,10 +14,13 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php wp_nav_menu( [
-				'position' => 'footer-menu',
-				'container' => 'nav',
-			] ); ?>
+			<?php
+			if ( has_nav_menu( 'footer-menu' ) ) :
+				wp_nav_menu( [
+					'location' => 'footer-menu',
+					'container' => 'nav',
+				] );
+			endif; ?>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->
 
