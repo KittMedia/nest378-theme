@@ -1,0 +1,40 @@
+{
+  "name": "nest378-theme",
+  "version": "0.1.0",
+  "description": "Theme for Nest378.",
+  "scripts": {
+    "build:dev": "webpack",
+    "build:production": "cross-env NODE_ENV=production webpack",
+    "watch": "webpack --watch"
+  },
+  "keywords": [
+    "wordpress-theme"
+  ],
+  "author": "Florian Brinkmann, Matthias Kittsteiner",
+  "license": "GPL-2.0+",
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/runtime-corejs2": "^7.0.0",
+    "@wordpress/babel-preset-default": "^2.1.0",
+    "autoprefixer": "^9.1.3",
+    "babel-loader": "^8.0.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "extract-loader": "^2.0.1",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-cli": "^6.0.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "@wordpress/babel-plugin-import-jsx-pragma": "^1.1.0",
+    "@wordpress/element": "^2.0.0"
+  }
+}
