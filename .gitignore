@@ -1,2 +1,4 @@
 node_modules/
 *.min.css
+style.css
+assets/js/functions.js
