@@ -41,7 +41,7 @@ if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar(
 		<?php endif; ?>
 
 		<?php if ( is_active_sidebar( 'sidebar-special' ) ) : ?>
-			<div id="widget-area" class="widget-area special-area" role="complementary">
+			<div id="widget-area-special" class="widget-area special-area" role="complementary">
 				<?php dynamic_sidebar( 'sidebar-special' ); ?>
 			</div><!-- .widget-area -->
 		<?php endif; ?>

@@ -16,6 +16,12 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+			<?php if ( is_front_page() && is_active_sidebar( 'entry-points' ) ) : ?>
+				<div id="widget-area-entry" class="hentry entry-points" role="complementary">
+					<?php dynamic_sidebar( 'entry-points' ); ?>
+				</div><!-- .widget-area -->
+			<?php endif; ?>
+
 		<?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
