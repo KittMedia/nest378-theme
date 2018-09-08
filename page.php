@@ -39,7 +39,7 @@ get_header(); ?>
 
 				if ( $latest_posts->have_posts() ) : ?>
 					<div class="latest-posts-front-page-block">
-						<h2><?php esc_html_e( 'Neueste Beiträge', 'nest378' ); ?></h2>
+						<h2><?php esc_html_e( 'Latest posts', 'nest378' ); ?></h2>
 						<?php while ( $latest_posts->have_posts() ) :
 							$latest_posts->the_post();
 
